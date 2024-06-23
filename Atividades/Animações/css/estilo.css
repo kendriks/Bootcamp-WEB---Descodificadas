@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(222, 240, 240);
+}
+
+h1 {
+    text-align: center;
+}
+
+.coracao {
+    left: 22%;
+    height: 400px;
+    width: 400px;
+    margin:300px;
+    background-color: grey;
+    transform: rotate(-45deg) scale(1);
+    position: relative;
+    animation: pulse 1s linear infinite;
+}
+
+.coracao::after, .coracao::before {
+    content: "";
+    height: 400px;
+    width: 400px;
+    background-color: gray;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.coracao::after {
+    top: -50%;
+}
+
+.coracao::before {
+    right: -50%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+
+    10% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    20% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+    30% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    40% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(0.8);
+        opacity: 1;
+    }
+
+    60% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    70% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+}
